@@ -1,0 +1,13 @@
+--INSTALL--
+
+To install:
+1. Download the scripts and configuration ini.
+2. Modify the config ini to suit your setup
+	a. IP of your limitlessLED controller (wifi bridge)
+	b. Type of bulbs you have (only RGBW commands are currently present)
+	c. Dim interval if you want to change it
+	d. Which type of things to do for (TV and Movies are supported)
+3. Copy all three files onto your Kodi host @ ~/
+4. Move autoexec.py to your userdata folder (~/.kodi/userdata/)
+5. Move playeractions.py and the ini into the scripts folder (~/.kodi/scripts/)
+6. Restart kodi to initialise the scripts
