@@ -8,6 +8,8 @@ To install:
 	c. Dim interval if you want to change it
 	d. Which type of playback to action (TV and Movies are supported)
 3. Copy all three files onto your Kodi host @ ~/
-4. Move autoexec.py to your userdata folder (~/.kodi/userdata/)
+4. Move autoexec.py to your userdata folder (~/.kodi/userdata/) (for profiles, see note below)
 5. Move playeractions.py and the ini into the scripts folder (~/.kodi/scripts/)
 6. Restart kodi to initialise the scripts
+
+NOTE: If you have profiles in use, the autoexec.py should be placed inside those rather than in userdata directly (~/.kodi/userdata/profiles/*PROFILE_NAME*/)
