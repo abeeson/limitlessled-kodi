@@ -1,5 +1,12 @@
---INSTALL--
+--DESCRIPTION--
+This script will allow your Kodi install to dim and brighten your lights on playback for TV and Movies. It will dim the lights down on play, and brighten them when you pause or stop the playback.
 
+--PRE-REQS--
+This script relies on the presence of a limitlessled / milight wifi bridge on your network to function. Wired conversions of that bridge also work, but this will not work without any sort of network bridge device.
+This script SHOULD work on any Kodi host (windows or linux at least, but potentially android as well) - Feel free to log issues if you have trouble and I'll do what i can to help
+This script has been written to allow either RGBW or dual white control, but as of now only contains the RGBW controls. Dual white will be added later, but if you require them log an issue and it'll motivate me to do it quicker :)
+
+--INSTALL--
 To install:
 1. Download the scripts and configuration ini.
 2. Modify the config ini to suit your setup
@@ -7,9 +14,17 @@ To install:
 	b. Type of bulbs you have (only RGBW commands are currently present)
 	c. Dim interval if you want to change it
 	d. Which type of playback to action (TV and Movies are supported)
-3. Copy all three files onto your Kodi host @ ~/
-4. Move autoexec.py to your userdata folder (~/.kodi/userdata/) (for profiles, see note below)
-5. Move playeractions.py and the ini into the scripts folder (~/.kodi/scripts/)
+3. Copy all three files onto your Kodi host (if it is not the PC you are already on)
+4. Move autoexec.py to the Kodi userdata folder
+5. Move playeractions.py and the ini into the scripts folder
 6. Restart kodi to initialise the scripts
 
-NOTE: If you have profiles in use, the autoexec.py should be placed inside those rather than in userdata directly (~/.kodi/userdata/profiles/*PROFILE_NAME*/)
+NOTE1: For Linux, Kodi stores its files and folders in ~/.kodi/, for Windows its under %APPDATA\Kodi\
+NOTE2: If you have profiles in use, the autoexec.py should be placed inside those rather than in userdata directly (userdata/profiles/*PROFILE_NAME*/)
+
+--KNOWN ISSUES / FAQ--
+Q: The script works, but sometimes it fails to completely dim my lights or just stops working for a period of time?
+A: There are known issues with the wifi chip in the limitlessLED bridge. A conversion using a raspberry Pi is available, and is highly recommended. You will need some soldering to acheive this: http://servernetworktech.com/2014/09/limitlessled-wifi-bridge-4-0-conversion-raspberry-pi/
+It will also result in the lights responding faster to app use rather than the delay, and improves reliability to 100%
+Q: When I play a show then pause quickly, sometimes my lights dim and brighten randomly?
+A: The way the commands are sent can cause them to overlap when done quickly. Playing another item will get the globes back in sync, so its nothing to worry about. Unfortunately the bulbs do not report any sort of state etc so there is no way to find out what they are doing before sending commands, so some commands are sent multiple times, and assumptions are maded about their state which sometimes result in strange behaviour.
