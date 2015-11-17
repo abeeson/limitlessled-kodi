@@ -14,13 +14,11 @@ To install:
 	b. Type of bulbs you have (only RGBW commands are currently present)
 	c. Dim interval if you want to change it
 	d. Which type of playback to action (TV and Movies are supported)
-3. Copy all three files onto your Kodi host (if it is not the PC you are already on)
-4. Move autoexec.py to the Kodi userdata folder
-5. Move playeractions.py and the ini into the scripts folder
-6. Restart kodi to initialise the scripts
+3. Copy all three files onto your Kodi box, into the Kodi userdata folder
+4. Restart kodi to initialise the scripts
 
 NOTE1: For Linux, Kodi stores its files and folders in ~/.kodi/, for Windows its under %APPDATA\Kodi\
-NOTE2: If you have profiles in use, the autoexec.py should be placed inside those rather than in userdata directly (userdata/profiles/*PROFILE_NAME*/)
+NOTE2: If you have profiles in use, the scripts should be placed inside the master profile path rather than in userdata directly (userdata/profiles/*PROFILE_NAME*/)
 
 --KNOWN ISSUES / FAQ--
 Q: The script works, but sometimes it fails to completely dim my lights or just stops working for a period of time?
