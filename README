@@ -17,7 +17,7 @@ To install:
 3. Copy all three files onto your Kodi box, into the Kodi userdata folder
 4. Restart kodi to initialise the scripts
 
-NOTE1: For Linux, Kodi stores its files and folders in ~/.kodi/, for Windows its under %APPDATA\Kodi\
+NOTE1: For Linux, Kodi stores its files and folders in ~/.kodi/, for Windows its under %APPDATA%\Kodi\
 NOTE2: If you have profiles in use, the scripts should be placed inside the master profile path rather than in userdata directly (userdata/profiles/*PROFILE_NAME*/)
 
 --KNOWN ISSUES / FAQ--
